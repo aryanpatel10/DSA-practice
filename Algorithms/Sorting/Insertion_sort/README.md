@@ -52,7 +52,7 @@ Pass 3: [1, 2, 4, 5]
 ---
 
 **Implementation:**
-```
+```python
 def insertion_sort(nums):
     n = len(nums)
 
