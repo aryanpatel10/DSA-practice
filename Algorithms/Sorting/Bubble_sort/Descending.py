@@ -16,7 +16,8 @@ def bubbleSortDescending(nums):
 
         if not isSwap:  # If no swaps, array is sorted
             break
-#hiiiiii
+
+
     return nums
 
 print(f"Sorted array (Descending): {bubbleSortDescending(nums)}")
