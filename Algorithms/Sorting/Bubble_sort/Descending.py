@@ -14,7 +14,7 @@ def bubbleSortDescending(nums):
                 nums[j], nums[j + 1] = nums[j + 1], nums[j]
                 isSwap = True
 
-        if not isSwap:  # If no swaps, array is sorted
+        if not isSwap:  # If no swaps, array is 
             break
 
 
