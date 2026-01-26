@@ -1,75 +1,83 @@
-# 🧮 Sorting Algorithms in Python
+# ⚡ Quick Sort Algorithm
 
-A simple and beginner-friendly repository containing popular **sorting algorithms** implemented in **Python**, along with explanations, examples, and time/space complexities.
-
----
-
-## 📚 Algorithms Covered
-
-- 🫧 Bubble Sort  
-- ⚡ Quick Sort  
+![Algorithm](https://img.shields.io/badge/Algorithm-Quick%20Sort-blue)
+![Average Time](https://img.shields.io/badge/Average%20Time-O(n%20log%20n)-green)
+![Worst Time](https://img.shields.io/badge/Worst%20Time-O(n²)-red)
+![Space](https://img.shields.io/badge/Space%20Complexity-O(log%20n)-yellow)
 
 ---
 
-## 🫧 Bubble Sort Algorithm
+## 📌 About
+**Quick Sort** is a fast and efficient **divide-and-conquer** sorting algorithm.
 
-![Algorithm](https://img.shields.io/badge/Algorithm-Bubble%20Sort-blue)
-![Time](https://img.shields.io/badge/Time%20Complexity-O(n²)-red)
-![Space](https://img.shields.io/badge/Space%20Complexity-O(1)-green)
+It works by selecting a **pivot element** and rearranging the array such that:
+- elements smaller than the pivot are placed on the left
+- elements greater than the pivot are placed on the right
 
-### 📌 About
-Bubble Sort ek **simple comparison-based sorting algorithm** hai.  
-Isme adjacent elements ko compare kiya jata hai aur agar wo galat order mein ho, to swap kar diya jata hai.
-
-Har pass ke baad **largest element end mein bubble up** ho jata hai.
+This process is recursively applied to both subarrays until the entire array is sorted.
 
 ---
 
-### 🧠 How Bubble Sort Works
-1. First element se start karo
-2. Adjacent element ke saath compare karo
-3. Agar current element bada ho, to swap karo
-4. End tak repeat karo
-5. Jab tak koi swap na ho, process repeat hota rahega
+## 🧠 How Quick Sort Works
+1. Choose a pivot element from the array
+2. Partition the array around the pivot
+3. Place the pivot in its correct sorted position
+4. Recursively sort the left and right subarrays
 
 ---
 
-### 🪜 Algorithm Steps
-1. Loop `i = 0` se `n-1` tak
-2. `swapped = False` set karo
-3. Adjacent elements compare karo
-4. Agar `arr[j] > arr[j+1]`, swap karo
-5. Agar ek pass mein koi swap nahi hua, break karo
+## 🪜 Algorithm Steps
+1. If the array has 0 or 1 element, return
+2. Select a pivot element
+3. Rearrange elements based on the pivot
+4. Recursively apply Quick Sort on both sides
 
 ---
 
-### 📊 Example
+## 📊 Example
 **Input:**
 ```text
-nums = [5, 1, 4, 2]
-Pass 1: [1, 5, 4, 2]
-        [1, 4, 5, 2]
-        [1, 4, 2, 5]
-
-Pass 2: [1, 2, 4, 5]
-Pass 3: No swaps → Sorted
-
+nums = [10, 7, 8, 9, 1, 5]
+Pivot = 5
+After partition → [1, 5, 10, 7, 8, 9]
+Final sorted array → [1, 5, 7, 8, 9, 10]
 ```
+## 🧩 Implementation (Python – Hoare Partition)
 
-## 🧑‍💻 Implementation
-```python 
-def bubble_sort(nums):
-    n = len(nums)
+```python
+def partition(nums,low,high):
+    pivot = nums[low]
+    i = low
+    j = high
+    while (i<j):
+        while nums[i] <= pivot and i <= high -1:
+            i = i+1
+        while nums[j]> pivot and j >= low +1:
+            j = j-1
+        if (i<j):
+            nums[i], nums[j] = nums[j], nums[i]
+    nums[low], nums[j] = nums[j], nums[low]
 
-    for i in range(n):
-        swapped = False
-        
-        for j in range(0, n - i - 1):
-            if nums[j] > nums[j + 1]:
-                nums[j], nums[j + 1] = nums[j + 1], nums[j]
-                swapped = True
-        
-        if not swapped:
-            break
-    
+    return j
+
+
+def quick_sort(nums,low,high):
+    #base case
+    if low >= high:
+        return
+    p= partition(nums,low,high)
+    quick_sort(nums,low,p-1)
+    quick_sort(nums,p+1,high)
+
     return nums
+
+#Example usage
+
+nums = [10, 7, 8, 9, 1, 5]
+sorted_array = quick_sort(nums,0,len(nums)-1)
+print(f"Sorted array is : {sorted_array}")
+
+
+
+
+
