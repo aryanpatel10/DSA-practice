@@ -21,4 +21,3 @@ print(f"Given array: {nums}")
 print(f"Sorted array: {selection_sort(nums)}")
 
 
-#fspahdfsfh
