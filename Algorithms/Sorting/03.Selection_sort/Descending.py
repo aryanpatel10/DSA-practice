@@ -20,4 +20,4 @@ nums = [1, 2, 3, 5]
 print(f"Given array: {nums}")
 print(f"Sorted array: {selection_sort(nums)}")
 
-
+#dfhpdshf;
