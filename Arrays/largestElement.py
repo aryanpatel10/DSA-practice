@@ -1,15 +1,23 @@
-# Problem: Find the largest element in an array
-def find_largest(arr):
-    max_element = arr[0]
+""""
+Given an array of integers nums, return the value of the largest element in the array
 
-    for num in arr:
-        if num > max_element:
-            max_element = num
+Example 1
+Input: nums = [3, 3, 6, 1]
+Output: 6
+Explanation: The largest element in array is 6
 
-    return max_element
+Example 2
+Input: nums = [3, 3, 0, 99, -40]
+Output: 99
+Explanation: The largest element in array is 99
 
-# Example usage
-if __name__ == "__main__":
-    arr = [10, 25, 3, 99, 56]
-    print(f"Given array:{arr}")
-    print("Largest element:", find_largest(arr))
+""" 
+nums = [2,3,4,1,9,4,7,0]
+n = len(nums)
+largest = nums[0]
+for i in range(n):
+    if nums[i] > largest:
+        largest = nums[i]
+        i += 1
+
+print(largest)
