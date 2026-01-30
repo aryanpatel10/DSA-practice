@@ -1,4 +1,5 @@
 nums = [8, 8, 7, 6, 5]
+
 n = len(nums)
 largest = nums[0]
 second_largest = -1
@@ -12,5 +13,4 @@ for i in range(n):
             second_largest = nums[i]
 
     
-
 print(second_largest)
