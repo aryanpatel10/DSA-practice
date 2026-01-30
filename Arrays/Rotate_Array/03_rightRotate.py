@@ -11,7 +11,7 @@ def rotateArray(nums,k):
     result.reverse()
 
     nums[:] = result  # isse kuchh nya nhi bna...nums[] k andr k sare element result k sath replace hogye
-    # return nums isse better hua yhn pe
+    # return nums      isse better hua yhn pe
 
 #EXAMPLE
 k = int(input("Enter the value for rotation: "))
