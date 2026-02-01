@@ -12,7 +12,7 @@ def findUnion(nums1, nums2):
 
 
 #                                       OPTIMAL APPROACH
-def union(nums1, nums2):
+def findUnion(nums1, nums2):
     n = len(nums1)
     m = len(nums2)
     i,j = 0,0
@@ -41,5 +41,5 @@ def union(nums1, nums2):
 # EXAMPLE CASE
 nums1 = [1,2,3,5]
 nums2 = [3,4]
-print(union(nums1, nums2))
+print(findUnion(nums1, nums2))
 
