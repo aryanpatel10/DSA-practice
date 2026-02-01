@@ -1,4 +1,4 @@
-#                                             GIVE ARRAYS ARE ALREADY SORTED 
+#                                             GIVEN ARRAYS ARE ALREADY SORTED 
 #                                             BRUTE FORCE APPROACH
 def arrayIntersection(nums1, nums2):
     n = len(nums1)
