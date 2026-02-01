@@ -22,12 +22,3 @@ nums = [1,0,1]
 moveZeros(nums)
 print(nums)
 
-"""
-BRUTE FORCE METHOD
-
-fosadgfpashdfgsdpf'
-fhsdofihsdpfbsypf
-dfgsaoudfghsdpfigs
-pfigasofhsadjpfsa
-
-"""
