@@ -1,4 +1,6 @@
-#                                  GIVEN ARRAYS ARE ALREADY SORTED 
+#Input: nums1 = [1,2,3,4], nums2 = [1,2,7]
+#Output: [1,2,3,4,7]
+#                                       GIVEN ARRAYS ARE ALREADY SORTED 
 #                                       BRUTE FORCE APPROACH
 def findUnion(nums1, nums2):
     st = set()
