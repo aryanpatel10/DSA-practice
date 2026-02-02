@@ -1,5 +1,5 @@
 #Input: nums= [1,2,2,3,5,6]
-# output: 6 ; it's the largest number present in the array``
+# output: 6 ; it's the largest number present in the array
 def largestElement(nums):
     n = len(nums)
     largest = nums[0]
