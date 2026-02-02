@@ -1,3 +1,5 @@
+#Input: nums = [1,0,2,0,0,3,3]
+#Output: nums = [1,2,3,3,0,0,0]; Place the non-zero element in the starting index of the array followed by the zeros
 def moveZeros(nums):
     #suppose No zeros are in the array
     j = -1   
