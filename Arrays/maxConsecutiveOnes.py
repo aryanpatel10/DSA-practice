@@ -1,4 +1,4 @@
-# Given a binary array nums, return the maximum number of consecutive 1s in the array.
+# Given a binary array nums, return the maximum number of consecutive 1's in the array.
 # input: nums = [0,1,1,0,1,1,1,0,1]
 # output: 3
 
