@@ -1,3 +1,5 @@
+#Input: nums= [1,2,2,3,5,6]
+# output: 5 ; it's the second largest number present in the array``
 def secondLargest(nums):
     n = len(nums)
     largest = nums[0]
