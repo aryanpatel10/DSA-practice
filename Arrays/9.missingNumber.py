@@ -34,7 +34,7 @@
 
 
 
-#                       OPTIMAL APPROACH--2
+#                      MOST OPTIMAL APPROACH
 def missingNumber(nums):
     n = len(nums)
     xor1 = 0
