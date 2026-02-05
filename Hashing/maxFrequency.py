@@ -13,17 +13,22 @@ def maxFrequency(nums,k):
     total = 0
     freq = 1
     target = nums[0]
+
     for right in range(n):
         total += nums[right]
 
         cost = nums[right] * (right-left+1) -total
+        #Valid window conditon
         while cost > k:
             total -= nums[left]
             left += 1
             cost = nums[right] * (right-left+1) -total
-        freq = max(freq, right-left+1)
-        
-        target = nums[right]
+        # MAX Freq update 
+        if (right-left+1) > freq:
+            freq = right -left +1
+            target = nums[right]        # Track target
+
+
     return target , freq
 
 
