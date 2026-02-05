@@ -28,16 +28,20 @@ def longestSubArray(nums,k):
     longest = 0
     prefix_sum_map = {}
     curernt_sum = 0
+    
     for i in range(n):
         curernt_sum += nums[i]
+
         #If sub array indx is from 0 to i
         if curernt_sum == k:
             longest = max(longest, i+1)
+
         # If subarray is in the mid somewhere
         rem = curernt_sum - k
         if rem in prefix_sum_map:
             length = i - prefix_sum_map[rem]
             longest = max(longest, length)
+
         #If current_sum is not present in the map...store it there with its indx
         if curernt_sum not in prefix_sum_map:
             prefix_sum_map[curernt_sum] = i
