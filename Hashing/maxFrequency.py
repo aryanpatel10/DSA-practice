@@ -5,7 +5,7 @@ Return the target and it's frequency """
 #Output: target: 4, freq: 3
 # Explain: Increment nums[0] by 3 times and nums[1] by 2 times to make nums = [4,4,4]
 
-                            # SLIDING WINDOW APPROACH
+                                # SLIDING WINDOW APPROACH
 def maxFrequency(nums,k):
     nums.sort()
     n = len(nums)
