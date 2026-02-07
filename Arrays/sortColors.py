@@ -4,7 +4,7 @@ so that objects of the same color are adjacent, with the colors in the order red
 We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
 """
 # Input: nums = [2,0,2,1,1,0,2]
-# output: [0,01,1,2,2,2]
+# output: [0,0,1,1,2,2,2]
 
 
 
@@ -43,6 +43,8 @@ def sortColors(nums):
 
 #                                       OPTIMAL APPROACH
 #                                   DUTCH NATIONAL FLAG ALGORITHM
+# Three ponters approach :mleft,mid and high.
+
 def sortColors(nums):
         n = len(nums)
         low = mid = 0
