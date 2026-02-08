@@ -55,7 +55,7 @@ print(maxSubArray(nums))
 
 
 
-#               Few changes in the KADANE'S ALGORITHM code if queston asked to return the SubaArray as well
+#              Few changes in the KADANE'S ALGORITHM code if queston asked to return the SubaArray as well
 def maxSubArray(nums):
     n = len(nums)
     max_sum = -10 ** 18
