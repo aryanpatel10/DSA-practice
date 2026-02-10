@@ -26,5 +26,29 @@ def rearrangeArray(nums):
         nums[2*i+1] = negative[i]
     return nums
 
+
+
+#                                            OPTIMAL APPROACH
+# Create a new array and iterate through the actual array. If the element is positive 
+# store it at the positive index of new array and Increase the positive index by 2 .
+#  Do the smae for nefative index if the element is negative.
+
+def rearrangeArray(nums):
+    n = len(nums)
+    ans = [0] * n
+    pos_indx = 0
+    neg_indx = 1
+    for i in range(n):
+        if nums[i] > 0:
+            ans[pos_indx] = nums[i]
+            pos_indx += 2
+        else:
+            ans[neg_indx] = nums[i]
+            neg_indx += 2
+    return ans
+
+
+
 nums = [3,1,-2,-5,2,-4]
 print(rearrangeArray(nums))
+
