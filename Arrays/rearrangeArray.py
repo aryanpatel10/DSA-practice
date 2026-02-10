@@ -67,28 +67,24 @@ def rearrangeArray(nums):
             pos.append(nums[i])
         else:
             neg.append(nums[i])
-    
-    if len(pos) > len(neg):
-        for i in range(len(neg)):
-            nums[2*i] = pos[i]
-            nums[2*i+1] = neg[i]
         
-        indx = 2 * len(neg)
-        for i in range(len(neg),len(pos),):
-            nums[indx] = pos[i]
-            indx += 1
-            
-        
-    else:
-        for i in range(len(pos)):
-            nums[2*i] = pos[i]
-            nums[2*i+1] = neg[i]
-    
-        indx = 2 * len(pos)
-        for i in range(len(pos), len(neg)):
-            nums[indx] = neg[i]
-            indx += 1
-    return nums
+    i = j = 0
+    ans = []
 
+    while i < len(pos) and j < len(neg):
+        ans.append(pos[i])
+        i += 1
+
+        ans.append(neg[j])
+        j += 1
+
+    while i < len(pos):
+        ans.append(pos[i])
+        i += 1
+    
+    while j < len(neg):
+        ans.append(neg[j])
+        j += 1
+    return ans
 nums = [1,2,3,-4,-1]
 print(rearrangeArray(nums))
