@@ -1,4 +1,4 @@
-#                                   PRINT ALL SUBSEQUENCES
+#                                   PRINT ALL SUBSEQUENCES[PICK/ NOT PICK PATTERN]
 """
 SUBSEQUENCE : A subsequnce is a sequence created by deleting zero or more elements from the given array without 
               changing the relative order of the remaining element.
@@ -7,7 +7,7 @@ EXAMPLE:
 nums = [1,2,3]
 
 valid susequence: [1,2] ---> we skipped 2 here, but maintain the order that 1 comes before 3.
-Invalid subsequence:[3,1] ---> we skippe d2 here but order gets changed.
+Invalid subsequence:[3,1] ---> we skipped 2 here but order gets changed.
 
 
 """
@@ -20,14 +20,12 @@ def printSubs(nums,indx,subs):
         print(subs)
         return
     
-    # Take element
+    # Pick element
     subs.append(nums[indx])
     printSubs(nums, indx+1, subs)
 
-    # Back Track
+    # Don't pick element
     subs.pop()
-
-    # Don't take element
     printSubs(nums,indx+1,subs)
 
 nums = [1, 2, 3]
