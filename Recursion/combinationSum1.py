@@ -1,4 +1,5 @@
 #                                   COMBINATION SUM 1
+# TYPE 1: Element can be use many times
 """
 Given an array of distinct integers candidates and a target integer target.
 Return a list of all unique combinations of candidates where the chosen numbers sum to target. 
@@ -37,3 +38,4 @@ def combinationSum(nums,target):                            # main function defi
 nums = [2,3,6,7]
 target = 7
 print(combinationSum(nums,target))
+
