@@ -15,7 +15,7 @@ def combinationSum(nums,target):                            # main function defi
     def combination(indx,target,combi):                    #  Inner Recursive function
         
         if target == 0:                                    # Base Case 1
-            res.append(combi.copy())
+            res.append(combi.copy())                   # WHENEVER STORING A MUTABLE LIST IN RESULT ; ALWAY STORE .copy() 
             return
         
         if indx == len(nums):                              # Base Case 2 
