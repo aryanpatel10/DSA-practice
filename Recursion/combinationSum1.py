@@ -31,7 +31,7 @@ def combinationSum(nums,target):                            # main function defi
         #Not pick
         combination(indx+1,target,combi)
 
-    combination(0,target,[])                            # Calling inner recursive function``
+    combination(0,target,[])                            # Calling inner recursive function
     return res
 
 
