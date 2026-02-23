@@ -24,7 +24,7 @@ def combinationSum(k,n):
                 res.append(combi[:])
             return
         
-        for num in range(indx,10):
+        for num in range(indx,10):              # Range(indx,10) becoz wh have to pick number in b/w 1 to 9
             if num > target:
                 break
 
