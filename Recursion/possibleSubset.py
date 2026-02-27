@@ -3,8 +3,8 @@
                                     # TYPE 1: Return list of all possible subset
 """
 Given an arrya 'nums'. Print the sum of each possible subset
-Input: nums = [2,3]
-Output:[[1, 2, 3], [1, 2], [1, 3], [1], [2, 3], [2], [3], []] ---> This can be in any order
+Input: nums = [1,2,2]
+Output:[[1, 2, 2], [1, 2], [1, 2], [1], [2, 2], [2], [2], []] ---> This can be in any order
 
 """
 
@@ -26,7 +26,7 @@ def possible_subset(nums):
     subSet(0,[])
     return ans
 
-nums = [1,2,3]
+nums = [1,2,2]
 print(possible_subset(nums))
         
 
@@ -34,7 +34,7 @@ print(possible_subset(nums))
 
 #                            TYPE 2: Return the list of all possible subset but it does not contain duplicates.
 # INPUT: nums = [1,2,2]
-# OUPUT: [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]
+# OUPUT:[[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]
 
 
 def possible_subset(nums):
@@ -56,7 +56,7 @@ def possible_subset(nums):
     return ans
                  
      
-nums = [1,2,3]
+nums = [1,2,2]
 print(possible_subset(nums))
 
 
