@@ -2,7 +2,7 @@
 
                                     # TYPE 1: Return list of all possible subset
 """
-Given an arrya 'nums'. Print the sum of each possible subset
+Given an arrya 'nums'. Return list of all possible subset
 Input: nums = [1,2,2]
 Output:[[1, 2, 2], [1, 2], [1, 2], [1], [2, 2], [2], [2], []] ---> This can be in any order
 
